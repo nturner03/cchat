@@ -1,7 +1,8 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $myfile = fopen("log.txt", "w") or die("Unable to open file!");
+    // $myfile = fopen("log.txt", "w") or die("Unable to open file!");
+    $myfile = "log.txt";
     $txt = $_POST["chat"] . "\n";
     fwrite($myfile, $txt);
     fwrite($myfile, $txt);
