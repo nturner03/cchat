@@ -3,7 +3,7 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $myfile = fopen("log.txt", "a") or die("Unable to open file!");
     $txt = PHP_EOL . $_POST["chat"];
-    fwrite($myfile, $txt);
+    fwrite($myfile, "@n" . $txt);
     echo file_get_contents( "log.txt" );
 }
 ?>
